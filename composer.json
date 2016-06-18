@@ -1,8 +1,8 @@
 {
-  "name" : "mrprompt/silex-api-skel",
-  "description" : "Silex REST Application Skeleton",
+  "name" : "romeumattos/twitter-like",
+  "description" : "Twitter Like REST Application",
   "license" : "MIT",
-  "homepage" : "https://github.com/mrprompt/silex-api-skel.git",
+  "homepage" : "https://github.com/romeumattos/twitter-like.git",
   "type": "project",
   "minimum-stability": "dev",
   "autoload" : {
