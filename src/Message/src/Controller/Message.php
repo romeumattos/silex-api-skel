@@ -46,6 +46,7 @@ final class Message
 
         return new View($message, View::HTTP_OK);
     }
+
     /**
      * Create new Message
      *
@@ -64,5 +65,28 @@ final class Message
         $message    = $app['message.service']->create($title, $text);
 
         return new View($message, View::HTTP_CREATED);
+    }
+
+    /**
+     * Retrieves information from message
+     *
+     * @param  Application $app
+     * @return View
+     */
+    public function delete(Application $app): View
+    {
+        /* @var $request \Symfony\Component\HttpFoundation\Request */
+        $request = $app['request'];
+
+        /* @var $id int */
+        $id      = (int) $request->get('id');
+
+        /* @var $message \Message\Entity\MessageInterface */
+        $message    = $app['message.service']->findByMessageId($id);
+
+        /* @var $message \Message\Entity\MessageInterface */
+        $message    = $app['message.service']->delete($message);
+
+        return new View($message, View::HTTP_NO_CONTENT);
     }
 }

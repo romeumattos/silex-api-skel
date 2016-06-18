@@ -184,6 +184,31 @@ class MessageTest extends WebTestCase
         $this->assertNotEmpty($object->data);
     }
 
+
+    /**
+     * @test
+     * @dataProvider validMessageIds
+     */
+    public function deleteWithMessageIdWithoutHeader($id)
+    {
+        /* @var $client \Symfony\Component\HttpKernel\Client */
+        $client = $this->createClient();
+
+        /* @var $crawler \Symfony\Component\DomCrawler\Crawler */
+        $crawler = $client->request('DELETE', '/message/' . $id, [], [], $this->header);
+
+        /* @var $response \Symfony\Component\HttpFoundation\Response */
+        $response = $client->getResponse();
+
+        /* @var $content string */
+        $content = $response->getContent();
+
+        /* @var $object \stdClass */
+        $object = json_decode($content);
+
+        $this->assertEquals(View::HTTP_NO_CONTENT, $response->getStatusCode());
+    }
+
     /**
      * @test
      * @dataProvider validObjects

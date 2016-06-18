@@ -63,15 +63,19 @@ APPLICATION_ENV="development" php -S localhost:8080 -t public
 ```
 
 ## Rotas
-- User
-  - Url: /message/1
+- Message
+  - Url: /message/{id}
   - Método: GET
 
-- User
+- Message
+  - Url: /message/{id}
+  - Método: DELETE
+
+- Message
   - Url: /message/
   - Método: GET
 
-- User
+- Message
   - Url: /message/
   - Método: POST
   - Parameters:

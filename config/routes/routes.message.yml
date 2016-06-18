@@ -11,12 +11,12 @@ message.view:
     requirements:
       id: \d+
 
-message.update:
-    path: /{id}
-    defaults: { _controller: 'Message\Controller\Message::update' }
-    methods: [PUT]
-    requirements:
-      id: \d+
+#message.update:
+#    path: /{id}
+#    defaults: { _controller: 'Message\Controller\Message::update' }
+#    methods: [PUT]
+#    requirements:
+#      id: \d+
 
 message.delete:
     path: /{id}
