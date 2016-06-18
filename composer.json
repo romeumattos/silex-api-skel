@@ -68,7 +68,7 @@
     "phpmd/phpmd" : "@stable",
     "sebastian/phpcpd": "*",
     "theseer/phpdox": "dev-master",
-    "fabpot/php-cs-fixer": "^1.11",
+    "friendsofphp/php-cs-fixer": "*",
     "useallfive/doctrine-data-fixtures-command": "dev-master"
   }
 }
