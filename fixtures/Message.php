@@ -18,19 +18,24 @@ class Message extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $i      = 1;
-        $message   = [
-            'title' => 'Message ' . $i,
-            'text' => 'message text ' . $i,
-        ];
 
-        $obj = new MessageModel();
-        $obj->setTitle($message['title']);
-        $obj->setText($message['text']);
+        while ($i <= 10) {
+            $message   = [
+                'title' => 'Message ' . $i,
+                'text' => 'message text ' . $i,
+            ];
 
-        $manager->persist($obj);
-        $manager->flush();
+            $obj = new MessageModel();
+            $obj->setTitle($message['title']);
+            $obj->setText($message['text']);
 
-        $this->addReference('message_' . $i, $obj);
+            $manager->persist($obj);
+            $manager->flush();
+
+            $this->addReference('message_' . $i, $obj);
+
+            $i++;
+        }
     }
 
     /**
