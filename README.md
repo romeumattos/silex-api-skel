@@ -1,4 +1,4 @@
-Skeleton API
+Twitter Like
 =============
 [![Build Status](https://travis-ci.org/romeumattos/twitter-like.svg?branch=master)](https://travis-ci.org/romeumattos/twitter-like)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d13b304b7c514ca5a3339b4cb9138367)](https://www.codacy.com/app/romeu-smattos/twitter-like?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romeumattos/twitter-like&amp;utm_campaign=Badge_Grade)
