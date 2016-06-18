@@ -1,16 +1,12 @@
 Skeleton API
 =============
-[![Build Status](https://travis-ci.org/mrprompt/silex-api-skel.svg)](https://travis-ci.org/mrprompt/silex-api-skel)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/b337e834-dd26-46fd-ad35-82e2afbc5f7d/mini.png)](https://insight.sensiolabs.com/projects/b337e834-dd26-46fd-ad35-82e2afbc5f7d)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/3bfa93fd578d476ca60ece30655df9a8)](https://www.codacy.com/app/mrprompt/silex-api-skel)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mrprompt/silex-api-skel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/silex-api-skel/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/mrprompt/silex-api-skel/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mrprompt/silex-api-skel/build-status/master)
-[![Code Climate](https://codeclimate.com/github/mrprompt/silex-api-skel/badges/gpa.svg)](https://codeclimate.com/github/mrprompt/silex-api-skel)
-[![Issue Count](https://codeclimate.com/github/mrprompt/silex-api-skel/badges/issue_count.svg)](https://codeclimate.com/github/mrprompt/silex-api-skel)
+[![Build Status](https://travis-ci.org/romeumattos/twitter-like.svg?branch=master)](https://travis-ci.org/romeumattos/twitter-like)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d13b304b7c514ca5a3339b4cb9138367)](https://www.codacy.com/app/romeu-smattos/twitter-like?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romeumattos/twitter-like&amp;utm_campaign=Badge_Grade)
+[![Code Climate](https://codeclimate.com/github/romeumattos/twitter-like/badges/gpa.svg)](https://codeclimate.com/github/romeumattos/twitter-like)
 
-API REST Skeleton
+Twitter Like API REST
 
-Este é um projeto exemplo de uso do Silex Framework para aplicações que exijam performance, fácil manutenção e escalabilidade. 
+Este é um projeto de cadastro de mensagens baseado no [Silex Api Skel](https://github.com/mrprompt/silex-api-skel)
 
 Ele utiliza sub componentes como:
 
@@ -36,6 +32,12 @@ Baixe o [Composer](https://getcomposer.org/)
 composer.phar install --prefer-dist -o
 ```
 
+## Rodando as Fixures
+```
+./vendor/bin/phing fixtures
+```
+
+
 ## Rodando localmente
 Você pode utilizar o [servidor web embutido](http://php.net/manual/pt_BR/features.commandline.webserver.php) no [PHP](http://www.php.net)
 para rodar localmente a API. Ou se preferir, configurar seu servidor web preferido apontando para a pasta *public*.
@@ -59,12 +61,16 @@ APPLICATION_ENV="development" php -S localhost:8080 -t public
 
 ## Rotas
 - User
-  - Url: /user/1
+  - Url: /message/1
   - Método: GET
 
 - User
-  - Url: /user/
+  - Url: /message/
   - Método: GET
+
+- User
+  - Url: /message/
+  - Método: POST
 
 ## Como contribuir
 
