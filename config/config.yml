@@ -2,18 +2,18 @@
 database:
   production:
     driver: pdo_sqlite
-    database: skel
-    dbname: skel
-    path: tmp/skel-production.sqlite
+    database: twitter-like-production
+    dbname: twitter-likel
+    path: tmp/twitter-like-production.sqlite
 
   development:
     driver: pdo_sqlite
-    database: skel
-    dbname: skel
-    path: tmp/skel-development.sqlite
+    database: twitter-like-development
+    dbname: twitter-like
+    path: tmp/twitter-like-development.sqlite
 
   testing:
     driver: pdo_sqlite
-    database: skel
-    dbname: skel
-    path: tmp/skel-testing.sqlite
+    database: twitter-like-test
+    dbname: twitter-like
+    path: tmp/twitter-like-testing.sqlite

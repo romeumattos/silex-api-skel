@@ -42,7 +42,6 @@ class Message implements MessageInterface
     /**
      * @ORM\Column(name="text", type="string", length=255, nullable=false)
      * @Serializer\Type("string")
-     * @Serializer\Exclude
      * @var string
      */
     protected $text;
