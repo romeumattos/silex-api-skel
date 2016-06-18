@@ -69,6 +69,7 @@
     "sebastian/phpcpd": "*",
     "theseer/phpdox": "dev-master",
     "friendsofphp/php-cs-fixer": "*",
-    "useallfive/doctrine-data-fixtures-command": "dev-master"
+    "useallfive/doctrine-data-fixtures-command": "dev-master",
+    "codeclimate/php-test-reporter": "dev-master"
   }
 }
