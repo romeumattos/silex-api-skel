@@ -21,7 +21,7 @@ Instalação
 ## Extensões necessárias
 - curl
 - pdo_sqlite
-- pdo_pgsql (se quiser usar o PostgreSQL)
+- pdo_pgsql (se usar o PostgreSQL)
 - reflection
 - json
 - xdebug (opcional)
@@ -81,8 +81,3 @@ APPLICATION_ENV="development" php -S localhost:8080 -t public
   - Parameters:
     - title
     - text
-
-## Como contribuir
-
-- faça um fork e envie um pull request
-- clique em 'star' :)
