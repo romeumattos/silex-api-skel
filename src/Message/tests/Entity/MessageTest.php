@@ -22,14 +22,10 @@ class MessageTest extends PHPUnit_Framework_TestCase
      */
     public function validObjects()
     {
-        $obj = new stdClass();
-        $obj->id = 1;
-        $obj->title  = 'Message';
-        $obj->text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec leo egestas, 
-                      suscipit mauris a, vulputate nunc. Pellentesque id risus congue, lobortis tortor a, 
-                      elementum justo. Proin placerat tellus tellus, in auctor metus hendrerit non. Mauris dictum arcu 
-                      sit amet pellentesque mollis. Integer ut imperdiet dui. Donec efficitur at magna vel ornare. 
-                      Quisque convallis egestas iaculis. ';
+        $obj        = new stdClass();
+        $obj->id    = 1;
+        $obj->title = 'Message';
+        $obj->text  = 'Message text';
 
         return [
             [
@@ -43,10 +39,14 @@ class MessageTest extends PHPUnit_Framework_TestCase
      */
     public function invalidObjects()
     {
-        $obj = new stdClass();
-        $obj->id = 'SS';
+        $obj        = new stdClass();
+        $obj->id    = 'SS';
         $obj->title = '';
-        $obj->text = '';
+        $obj->text  = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec leo egestas, 
+                      suscipit mauris a, vulputate nunc. Pellentesque id risus congue, lobortis tortor a, 
+                      elementum justo. Proin placerat tellus tellus, in auctor metus hendrerit non. Mauris dictum arcu 
+                      sit amet pellentesque mollis. Integer ut imperdiet dui. Donec efficitur at magna vel ornare. 
+                      Quisque convallis egestas iaculis. ';
 
         return [
             [

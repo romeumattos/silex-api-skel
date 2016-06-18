@@ -120,7 +120,8 @@ class Message implements MessageInterface
     public function setText(string $text)
     {
         try {
-            v::notEmpty()->assert($text);
+            v::stringType()->length(1,140)->assert($text);
+
             $this->text = $text;
         } catch (AllOfException $e) {
             throw new InvalidArgumentException('Text is invalid');
