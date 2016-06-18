@@ -50,19 +50,19 @@ interface MessageInterface
     /**
      * Create an message
      *
-     * @param string $name
-     * @param string $email
+     * @param string $title
+     * @param string $text
      * @return MessageModel
      */
-    public function create(string $name, string $email): MessageModel;
+    public function create(string $title, string $text): MessageModel;
 
     /**
      * Update an message
      *
      * @param MessageModel $message
-     * @param string $name
-     * @param string $email
+     * @param string $title
+     * @param string $text
      * @return MessageModel
      */
-    public function update(MessageModel $message, string $name, string $email): MessageModel;
+    public function update(MessageModel $message, string $title, string $text): MessageModel;
 }

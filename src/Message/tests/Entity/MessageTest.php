@@ -24,8 +24,12 @@ class MessageTest extends PHPUnit_Framework_TestCase
     {
         $obj = new stdClass();
         $obj->id = 1;
-        $obj->name  = 'Teste';
-        $obj->email = 'teste@teste.net';
+        $obj->title  = 'Message';
+        $obj->text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec leo egestas, 
+                      suscipit mauris a, vulputate nunc. Pellentesque id risus congue, lobortis tortor a, 
+                      elementum justo. Proin placerat tellus tellus, in auctor metus hendrerit non. Mauris dictum arcu 
+                      sit amet pellentesque mollis. Integer ut imperdiet dui. Donec efficitur at magna vel ornare. 
+                      Quisque convallis egestas iaculis. ';
 
         return [
             [
@@ -41,8 +45,8 @@ class MessageTest extends PHPUnit_Framework_TestCase
     {
         $obj = new stdClass();
         $obj->id = 'SS';
-        $obj->name = '';
-        $obj->email = 'lalala';
+        $obj->title = '';
+        $obj->text = '';
 
         return [
             [
@@ -54,13 +58,13 @@ class MessageTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider validObjects
-     * @covers       \Message\Entity\Message::setName
+     * @covers       \Message\Entity\Message::setTitle
      */
-    public function setNameReturnEmptyOnSuccess($obj)
+    public function setTitleReturnEmptyOnSuccess($obj)
     {
         $message = new Message();
 
-        $result = $message->setName($obj->name);
+        $result = $message->setTitle($obj->title);
 
         $this->assertEmpty($result);
     }
@@ -68,53 +72,53 @@ class MessageTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidObjects
-     * @covers       \Message\Entity\Message::setName
+     * @covers       \Message\Entity\Message::setTitle
      * @expectedException \InvalidArgumentException
      */
-    public function setNameThrowsExceptionWhenEmpty($obj)
+    public function setTitleThrowsExceptionWhenEmpty($obj)
     {
         $message = new Message();
-        $message->setName($obj->name);
+        $message->setTitle($obj->title);
     }
 
     /**
      * @test
      * @dataProvider validObjects
-     * @covers       \Message\Entity\Message::getName
+     * @covers       \Message\Entity\Message::getTitle
      */
-    public function getNameReturnNameAttribute($obj)
+    public function getTitleReturnTitleAttribute($obj)
     {
         $message = new Message();
 
-        $this->modifyAttribute($message, 'name', $obj->name);
+        $this->modifyAttribute($message, 'title', $obj->title);
 
-        $this->assertEquals($message->getName(), $obj->name);
+        $this->assertEquals($message->getTitle(), $obj->title);
     }
 
     /**
      * @test
      * @dataProvider validObjects
-     * @covers       \Message\Entity\Message::getEmail
+     * @covers       \Message\Entity\Message::getText
      */
-    public function getEmailReturnEmailAttribute($obj)
+    public function getTextReturnTextAttribute($obj)
     {
         $message = new Message();
 
-        $this->modifyAttribute($message, 'email', $obj->email);
+        $this->modifyAttribute($message, 'text', $obj->text);
 
-        $this->assertEquals($message->getEmail(), $obj->email);
+        $this->assertEquals($message->getText(), $obj->text);
     }
 
     /**
      * @test
      * @dataProvider validObjects
-     * @covers       \Message\Entity\Message::setEmail
+     * @covers       \Message\Entity\Message::setText
      */
-    public function setEmailReturnEmptyOnSuccess($obj)
+    public function setTextReturnEmptyOnSuccess($obj)
     {
         $message = new Message();
 
-        $result = $message->setEmail($obj->email);
+        $result = $message->setText($obj->text);
 
         $this->assertEmpty($result);
     }
@@ -122,12 +126,12 @@ class MessageTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      * @dataProvider invalidObjects
-     * @covers       \Message\Entity\Message::setEmail
+     * @covers       \Message\Entity\Message::setText
      * @expectedException \InvalidArgumentException
      */
-    public function setEmailThrowsInvalidArgumentExceptoinWhenInvalid($obj)
+    public function setTextThrowsInvalidArgumentExceptoinWhenInvalid($obj)
     {
         $message = new Message();
-        $message->setEmail($obj->email);
+        $message->setText($obj->text);
     }
 }

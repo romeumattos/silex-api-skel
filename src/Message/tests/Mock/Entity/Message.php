@@ -20,10 +20,10 @@ abstract class Message
     {
         $message = m::mock(MessageInterface::class);
         $message->shouldReceive('getId')->andReturn(1)->byDefault();
-        $message->shouldReceive('setName')->andReturnNull()->byDefault();
-        $message->shouldReceive('getName')->andReturn('Lorem ipsum')->byDefault();
-        $message->shouldReceive('setEmail')->andReturnNull()->byDefault();
-        $message->shouldReceive('getEmail')->andReturn('foo@bar.bar')->byDefault();
+        $message->shouldReceive('setTitle')->andReturnNull()->byDefault();
+        $message->shouldReceive('getTitle')->andReturn('Lorem ipsum')->byDefault();
+        $message->shouldReceive('setText')->andReturnNull()->byDefault();
+        $message->shouldReceive('getText')->andReturn('Message Text')->byDefault();
 
         return $message;
     }

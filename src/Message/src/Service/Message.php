@@ -54,7 +54,7 @@ final class Message implements MessageInterface
         } catch (UniqueConstraintViolationException $ex) {
             $this->em->rollBack();
 
-            throw new InvalidArgumentException('Email is already registered', 409, $ex);
+            throw new InvalidArgumentException('Title is already registered', 409, $ex);
         } catch (Exception $ex) {
             $this->em->rollBack();
 
@@ -96,9 +96,9 @@ final class Message implements MessageInterface
     /**
      * @inheritdoc
      */
-    public function create(string $name, string $email): MessageModel
+    public function create(string $title, string $text): MessageModel
     {
-        $message = MessageFactory::create($name, $email);
+        $message = MessageFactory::create($title, $text);
 
         return $this->save($message);
     }
@@ -106,10 +106,10 @@ final class Message implements MessageInterface
     /**
      * @inheritdoc
      */
-    public function update(MessageModel $message, string $name, string $email): MessageModel
+    public function update(MessageModel $message, string $title, string $text): MessageModel
     {
         /* @var $update \Message\Entity\Message */
-        $update = MessageFactory::update($message, $name, $email);
+        $update = MessageFactory::update($message, $title, $text);
 
         return $this->save($update);
     }

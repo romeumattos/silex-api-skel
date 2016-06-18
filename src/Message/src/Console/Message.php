@@ -21,7 +21,7 @@ class Message extends Command
      */
     public function configure()
     {
-        $this->setName('messages:list')->setDescription('List all messages');
+        $this->setTitle('messages:list')->setDescription('List all messages');
     }
 
     /**
@@ -43,7 +43,7 @@ class Message extends Command
 
         /* @var $message \Message\Entity\MessageInterface */
         array_Walk($result, function($message) use($output) {
-            $output->writeln($message->getName() . ' - ' . $message->getEmail());
+            $output->writeln($message->getTitle() . ' - ' . $message->getText());
         });
 
         return true;

@@ -83,8 +83,8 @@ class MessageTest extends WebTestCase
         return [
             [
                 [
-                    "name" => "Fooo Bar bar",
-                    "email" => "message_test_one@messages.net"
+                    "title" => "Fooo Bar bar",
+                    "text" => "message_test_one@messages.net"
                 ]
             ]
         ];

@@ -33,19 +33,19 @@ class Message implements MessageInterface
     protected $id;
 
     /**
-     * @ORM\Column(name="name", type="string", length=1024, nullable=false)
+     * @ORM\Column(name="title", type="string", length=1024, nullable=false, unique=true)
      * @Serializer\Type("string")
      * @var string
      */
-    protected $name;
+    protected $title;
 
     /**
-     * @ORM\Column(name="email", type="string", length=255, nullable=false, unique=true)
+     * @ORM\Column(name="text", type="string", length=255, nullable=false)
      * @Serializer\Type("string")
      * @Serializer\Exclude
      * @var string
      */
-    protected $email;
+    protected $text;
 
     /**
      * @ORM\Column(name="active", type="boolean", nullable=true)
@@ -88,44 +88,43 @@ class Message implements MessageInterface
     /**
      * @inheritdoc
      */
-    public function getName(): string
+    public function getTitle(): string
     {
-        return $this->name;
+        return $this->title;
     }
 
     /**
      * @inheritdoc
      */
-    public function setName(string $name)
+    public function setTitle(string $title)
     {
         try {
-            v::notEmpty()->assert($name);
+            v::notEmpty()->assert($title);
 
-            $this->name = $name;
+            $this->title = $title;
         } catch (AllOfException $e) {
-            throw new InvalidArgumentException('Name is invalid');
+            throw new InvalidArgumentException('Title is invalid');
         }
     }
 
     /**
      * @inheritdoc
      */
-    public function getEmail(): string
+    public function getText(): string
     {
-        return $this->email;
+        return $this->text;
     }
 
     /**
      * @inheritdoc
      */
-    public function setEmail(string $email)
+    public function setText(string $text)
     {
         try {
-            v::notEmpty()->email()->assert($email);
-
-            $this->email = $email;
+            v::notEmpty()->assert($text);
+            $this->text = $text;
         } catch (AllOfException $e) {
-            throw new InvalidArgumentException('E-mail is invalid');
+            throw new InvalidArgumentException('Text is invalid');
         }
     }
 

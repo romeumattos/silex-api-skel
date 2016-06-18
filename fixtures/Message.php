@@ -19,13 +19,13 @@ class Message extends AbstractFixture implements OrderedFixtureInterface
     {
         $i      = 1;
         $message   = [
-            'name' => 'Message ' . $i,
-            'email' => 'message' . $i . '@messages.net',
+            'title' => 'Message ' . $i,
+            'text' => 'message text ' . $i,
         ];
 
         $obj = new MessageModel();
-        $obj->setName($message['name']);
-        $obj->setEmail($message['email']);
+        $obj->setTitle($message['title']);
+        $obj->setText($message['text']);
 
         $manager->persist($obj);
         $manager->flush();
@@ -40,6 +40,6 @@ class Message extends AbstractFixture implements OrderedFixtureInterface
      */
     public function getOrder()
     {
-        return 2;
+        return 1;
     }
 }

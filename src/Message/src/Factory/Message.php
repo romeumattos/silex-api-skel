@@ -15,15 +15,15 @@ abstract class Message
     /**
      * Create message object
      *
-     * @param string $name
-     * @param string $email
+     * @param string $title
+     * @param string $text
      * @return MessageModel
      */
-    public static function create(string $name, string $email): MessageModel
+    public static function create(string $title, string $text): MessageModel
     {
         $message = new MessageModel();
-        $message->setName($name);
-        $message->setEmail($email);
+        $message->setTitle($title);
+        $message->setText($text);
 
         return $message;
     }
@@ -32,14 +32,14 @@ abstract class Message
      * Update message object
      *
      * @param MessageModel $message
-     * @param string $name
-     * @param string $email
+     * @param string $title
+     * @param string $text
      * @return MessageModel
      */
-    public static function update(MessageModel $message, string $name, string $email): MessageModel
+    public static function update(MessageModel $message, string $title, string $text): MessageModel
     {
-        $message->setName($name);
-        $message->setEmail($email);
+        $message->setTitle($title);
+        $message->setText($text);
 
         return $message;
     }

@@ -57,11 +57,11 @@ final class Message
         /* @var $request \Symfony\Component\HttpFoundation\Request */
         $request = $app['request'];
 
-        $name    = $request->get('name');
-        $email   = $request->get('email');
+        $title   = $request->get('title');
+        $text    = $request->get('text');
 
         /* @var $message \Message\Entity\MessageInterface */
-        $message    = $app['message.service']->create($name, $email);
+        $message    = $app['message.service']->create($title, $text);
 
         return new View($message, View::HTTP_CREATED);
     }

@@ -18,36 +18,36 @@ interface MessageInterface
     public function getId(): int;
 
     /**
-     * Get the Name
+     * Get the Title
      *
      * @return string
      */
-    public function getName(): string;
+    public function getTitle(): string;
 
     /**
-     * Set Name
+     * Set Title
      *
-     * @param string $name
+     * @param string $title
      * @return void
      * @throws \InvalidArgumentException
      */
-    public function setName(string $name);
+    public function setTitle(string $title);
 
     /**
-     * Get the email
+     * Get the text
      *
      * @return string
      */
-    public function getEmail(): string;
+    public function getText(): string;
 
     /**
-     * Set the email
+     * Set the text
      *
-     * @param string $email
+     * @param string $text
      * @return void
      * @throws \InvalidArgumentException
      */
-    public function setEmail(string $email);
+    public function setText(string $text);
 
     /**
      * Mark message as deleted
