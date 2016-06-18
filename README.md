@@ -20,7 +20,8 @@ Instalação
 
 ## Extensões necessárias
 - curl
-- pdo
+- pdo_sqlite
+- pdo_pgsql (se quiser usar o PostgreSQL)
 - reflection
 - json
 - xdebug (opcional)
@@ -31,6 +32,8 @@ Baixe o [Composer](https://getcomposer.org/)
 ```
 composer.phar install --prefer-dist -o
 ```
+
+Edite o arquivo ```/config/config.yml ``` com suas configurações
 
 ## Rodando as Fixures
 ```
