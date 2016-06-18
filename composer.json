@@ -12,14 +12,16 @@
     },
     "psr-4" : {
       "Common\\": "src/Common/src/",
-      "User\\": "src/User/src/"
+      "User\\": "src/User/src/",
+      "Message\\": "src/Message/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "Common\\Tests\\": "src/Common/tests/",
       "Doctrine\\Tests\\": "vendor/doctrine/orm/tests/Doctrine/Tests/",
-      "User\\Tests\\": "src/User/tests/"
+      "User\\Tests\\": "src/User/tests/",
+      "Message\\Tests\\": "src/Message/tests/"
     }
   },
   "authors" : [
@@ -27,6 +29,12 @@
       "name" : "Thiago Paes",
       "email" : "mrprompt@gmail.com",
       "homepage" : "http://www.mrprompt.com.br",
+      "role" : "Developer"
+    },
+    {
+      "name" : "Romeu Mattos",
+      "email" : "romeu.smattos@gmail.com",
+      "homepage" : "http://www.romeumattos.com.br",
       "role" : "Developer"
     }
   ],

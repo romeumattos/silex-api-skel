@@ -1,4 +1,3 @@
 tmp/*.*
 tmp/log/*.*
 vendor
-phpunit.xml

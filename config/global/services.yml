@@ -3,3 +3,6 @@ services:
   user.service:
     - User\Service\User
     - doctrine_orm.em
+  message.service:
+    - Message\Service\Message
+    - doctrine_orm.em

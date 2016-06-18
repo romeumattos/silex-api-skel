@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model xlink:href="vendor/phing/phing/etc/phing-grammar.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0" ?>
-<project name="Exib-me" default="build">
+<project name="Twitter-like" default="build">
     <property name="project.bindir" value="${project.basedir}/vendor/bin" />
     <property name="project.tmpdir" value="${project.basedir}/tmp" />
     <property name="project.logdir" value="${project.tmpdir}/log" />

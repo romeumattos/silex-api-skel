@@ -1,0 +1,31 @@
+# message route
+message.home:
+    path: /
+    defaults: { _controller: 'Message\Controller\Message::get' }
+    methods: [GET]
+
+message.view:
+    path: /{id}
+    defaults: { _controller: 'Message\Controller\Message::view' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+message.update:
+    path: /{id}
+    defaults: { _controller: 'Message\Controller\Message::update' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+message.delete:
+    path: /{id}
+    defaults: { _controller: 'Message\Controller\Message::delete' }
+    methods: [DELETE]
+    requirements:
+      id: \d+
+
+message.create:
+    path: /
+    defaults: { _controller: 'Message\Controller\Message::create' }
+    methods: [POST]
