@@ -2,8 +2,10 @@
 database:
   production:
     driver: pdo_pgsql
-    database: twitter-like-production
-#    user: postgres
+    host: ec2-50-19-239-232.compute-1.amazonaws.com
+    database: d9eot47ulp5kgm
+    user: ebyggwqepoxqpx
+    port: 5432
 #    path: tmp/twitter-like-production.sqlite
 
   development:
