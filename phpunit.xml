@@ -20,9 +20,6 @@
     </php>
 
     <testsuites>
-        <testsuite name="User">
-            <directory>src/User/tests/</directory>
-        </testsuite>
         <testsuite name="Message">
             <directory>src/Message/tests/</directory>
         </testsuite>

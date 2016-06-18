@@ -12,7 +12,6 @@
     },
     "psr-4" : {
       "Common\\": "src/Common/src/",
-      "User\\": "src/User/src/",
       "Message\\": "src/Message/src/"
     }
   },
@@ -20,7 +19,6 @@
     "psr-4": {
       "Common\\Tests\\": "src/Common/tests/",
       "Doctrine\\Tests\\": "vendor/doctrine/orm/tests/Doctrine/Tests/",
-      "User\\Tests\\": "src/User/tests/",
       "Message\\Tests\\": "src/Message/tests/"
     }
   },

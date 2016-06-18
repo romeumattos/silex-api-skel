@@ -95,7 +95,7 @@ class MessageTest extends WebTestCase
      *
      * @return multitype:multitype:multitype:string
      */
-    public function validProfileIds()
+    public function validMessageIds()
     {
         return
             [
@@ -159,7 +159,7 @@ class MessageTest extends WebTestCase
 
     /**
      * @test
-     * @dataProvider validProfileIds
+     * @dataProvider validMessageIds
      */
     public function getWithMessageIdWithoutHeader($id)
     {

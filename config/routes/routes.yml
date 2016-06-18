@@ -1,7 +1,4 @@
 # config/routes.yml
-user:
-    prefix: /user
-    resource: routes.user.yml
 message:
     prefix: /message
     resource: routes.message.yml
