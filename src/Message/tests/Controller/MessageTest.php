@@ -186,15 +186,15 @@ class MessageTest extends WebTestCase
 
     /**
      * @test
-     * @dataProvider validProfileIds
+     * @dataProvider validObjects
      */
-    public function getMessageMessageIdWithHeader($id)
+    public function postMessageWithHeader($object)
     {
         /* @var $client \Symfony\Component\HttpKernel\Client */
         $client = $this->createClient();
 
         /* @var $crawler \Symfony\Component\DomCrawler\Crawler */
-        $crawler = $client->request('GET', '/message/' . $id, [], [], $this->header);
+        $crawler = $client->request('POST', '/message/', $object, [], $this->header);
 
         /* @var $response \Symfony\Component\HttpFoundation\Response */
         $response = $client->getResponse();
@@ -206,8 +206,8 @@ class MessageTest extends WebTestCase
         $object = json_decode($content);
 
         $this->assertJson($content);
-        $this->assertEquals(View::HTTP_OK, $response->getStatusCode());
-        $this->assertEquals(View::HTTP_OK, $object->code);
+        $this->assertEquals(View::HTTP_CREATED, $response->getStatusCode());
+        $this->assertEquals(View::HTTP_CREATED, $object->code);
         $this->assertNotEmpty($object->data);
     }
 }

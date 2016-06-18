@@ -46,4 +46,23 @@ final class Message
 
         return new View($message, View::HTTP_OK);
     }
+    /**
+     * Create new Message
+     *
+     * @param  Application $app
+     * @return View
+     */
+    public function create(Application $app): View
+    {
+        /* @var $request \Symfony\Component\HttpFoundation\Request */
+        $request = $app['request'];
+
+        $name    = $request->get('name');
+        $email   = $request->get('email');
+
+        /* @var $message \Message\Entity\MessageInterface */
+        $message    = $app['message.service']->create($name, $email);
+
+        return new View($message, View::HTTP_CREATED);
+    }
 }
