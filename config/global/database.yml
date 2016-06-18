@@ -1,12 +1,12 @@
 # Database
 database:
   production:
-    driver: pdo_sqlite
-    path: tmp/api.sqlite
+    driver: pdo_pgsql
+#    path: tmp/api.sqlite
 
   development:
-    driver: pdo_sqlite
-    path: tmp/api.sqlite
+    driver: pdo_pgsql
+#    path: tmp/api.sqlite
 
   testing:
     driver: pdo_sqlite

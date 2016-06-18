@@ -71,6 +71,9 @@ APPLICATION_ENV="development" php -S localhost:8080 -t public
 - User
   - Url: /message/
   - Método: POST
+  - Parameters:
+    - title
+    - text
 
 ## Como contribuir
 

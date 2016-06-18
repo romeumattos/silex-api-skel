@@ -1,10 +1,10 @@
 # Banco de dados
 database:
   production:
-    driver: pdo_sqlite
+    driver: pdo_pgsql
     database: twitter-like-production
-    dbname: twitter-likel
-    path: tmp/twitter-like-production.sqlite
+#    user: postgres
+#    path: tmp/twitter-like-production.sqlite
 
   development:
     driver: pdo_sqlite

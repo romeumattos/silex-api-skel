@@ -40,6 +40,7 @@
     "php": ">=7.0",
     "ext-pdo": "*",
     "ext-pdo_sqlite": "*",
+    "ext-pdo_pgsql": "*",
     "ext-json": "*",
     "ext-intl": "*",
     "ext-xsl": "*",
